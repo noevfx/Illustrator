@@ -23,3 +23,9 @@ _backups/
 .il_bridge/
 node_modules/
 __pycache__/
+
+# Instruções de agentes ficam só no computador
+AGENTS.md
+CLAUDE.md
+.clinerules
+.agents/
