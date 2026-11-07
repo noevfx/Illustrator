@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-DESTINATION="$HOME/Library/Application Support/Adobe/CEP/extensions/com.eduardonoe.artboardresizer"
+DESTINATION="$HOME/Library/Application Support/Adobe/CEP/extensions/com.noevfx.artboardresizer"
 
 if [[ -e "$DESTINATION" ]]; then
     BACKUP="${DESTINATION}.removed-$(date +%Y%m%d%H%M%S)"

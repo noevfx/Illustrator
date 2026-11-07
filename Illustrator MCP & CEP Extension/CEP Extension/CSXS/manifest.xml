@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ExtensionManifest Version="7.0"
-    ExtensionBundleId="com.eduardonoe.artboardresizer"
-    ExtensionBundleVersion="2.7.0"
-    ExtensionBundleName="Artboard Resizer"
+    ExtensionBundleId="com.ilmcp.bridge"
+    ExtensionBundleVersion="1.0.0"
+    ExtensionBundleName="IL MCP Bridge"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <ExtensionList>
-        <Extension Id="com.eduardonoe.artboardresizer.panel" Version="2.7.0" />
+        <Extension Id="com.ilmcp.bridge.panel" Version="1.0.0" />
     </ExtensionList>
     <ExecutionEnvironment>
         <HostList>
@@ -19,13 +19,14 @@
         </RequiredRuntimeList>
     </ExecutionEnvironment>
     <DispatchInfoList>
-        <Extension Id="com.eduardonoe.artboardresizer.panel">
+        <Extension Id="com.ilmcp.bridge.panel">
             <DispatchInfo>
                 <Resources>
                     <MainPath>./index.html</MainPath>
-                    <ScriptPath>./host/ArtboardResizer.jsx</ScriptPath>
+                    <ScriptPath>./jsx/host.jsx</ScriptPath>
                     <CEFCommandLine>
-                        <Parameter>--enable-file-cookies</Parameter>
+                        <Parameter>--enable-nodejs</Parameter>
+                        <Parameter>--mixed-context</Parameter>
                     </CEFCommandLine>
                 </Resources>
                 <Lifecycle>
@@ -33,20 +34,16 @@
                 </Lifecycle>
                 <UI>
                     <Type>Panel</Type>
-                    <Menu>Artboard Resizer</Menu>
+                    <Menu>IL MCP Bridge</Menu>
                     <Geometry>
                         <Size>
-                            <Width>340</Width>
-                            <Height>690</Height>
+                            <Width>300</Width>
+                            <Height>320</Height>
                         </Size>
                         <MinSize>
-                            <Width>290</Width>
-                            <Height>550</Height>
+                            <Width>220</Width>
+                            <Height>160</Height>
                         </MinSize>
-                        <MaxSize>
-                            <Width>900</Width>
-                            <Height>1200</Height>
-                        </MaxSize>
                     </Geometry>
                 </UI>
             </DispatchInfo>

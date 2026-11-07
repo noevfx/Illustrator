@@ -15,3 +15,11 @@ desktop.ini
 # Temporarios
 *.tmp
 *~
+
+# Backups locais de versões (política de releases: ver D:\.IA agents\global\RELEASES.md)
+_backups/
+
+# runtime do bridge e dependencias
+.il_bridge/
+node_modules/
+__pycache__/

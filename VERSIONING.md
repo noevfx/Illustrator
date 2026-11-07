@@ -25,9 +25,9 @@ Exemplo:
 Para paineis CEP, a versao precisa ficar em sintonia em tres lugares:
 
 ```text
-PC/Artboard_Resizer/CSXS/manifest.xml     -> ExtensionBundleVersion e Extension Version
-PC/Artboard_Resizer/host/ArtboardResizer.jsx -> var VERSION
-MAC/... (espelho exato do PC)
+version.txt                              -> versao (fonte unica do build)
+src/Artboard_Resizer/host/ArtboardResizer.jsx -> var VERSION
+(o build.ps1 le a versao do manifest para nomear o zip)
 ```
 
 O rodape do painel le a versao do host via `getDocumentInfo`, entao basta
@@ -36,14 +36,7 @@ como confirmacao visual de que a build instalada e a esperada.
 
 ## PC e MAC
 
-As pastas `PC/` e `MAC/` devem ser identicas em `host/`, `js/`, `css/`,
-`index.html` e `CSXS/`. Apenas os instaladores diferem (`.bat` vs `.command`).
-
-Depois de qualquer alteracao:
-
-```bash
-cp PC/Artboard_Resizer/host/ArtboardResizer.jsx MAC/Artboard_Resizer/host/ArtboardResizer.jsx
-```
+Ha uma unica fonte do painel em `src/Artboard_Resizer/`. O `scripts/build.ps1` a copia para `PC/` e `MAC/` dentro do zip; so os instaladores (`instaladores/PC` e `instaladores/MAC`) diferem. Nao existe mais copia para espelhar a mao.
 
 ## Changelog
 

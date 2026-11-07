@@ -6,7 +6,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -Command ^
   "$ErrorActionPreference='Stop';" ^
   "$source=Join-Path ([System.IO.Path]::GetFullPath('%~dp0')) 'Artboard_Resizer';" ^
   "$extensions=Join-Path $env:APPDATA 'Adobe\CEP\extensions';" ^
-  "$destination=Join-Path $extensions 'com.eduardonoe.artboardresizer';" ^
+  "$destination=Join-Path $extensions 'com.noevfx.artboardresizer';" ^
   "if(!(Test-Path $source)){throw 'The Artboard_Resizer folder is missing. Extract the complete ZIP before running this installer.'};" ^
   "New-Item -ItemType Directory -Path $extensions -Force | Out-Null;" ^
   "if(Test-Path $destination){$backup=$destination+'.backup-'+(Get-Date -Format 'yyyyMMddHHmmss'); Move-Item -LiteralPath $destination -Destination $backup -Force};" ^

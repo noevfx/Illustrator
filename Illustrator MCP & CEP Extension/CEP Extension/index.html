@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IL MCP Bridge</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Adobe Clean', Arial, sans-serif;
+      background: #1e1e1e;
+      color: #d4d4d4;
+      font-size: 12px;
+      padding: 10px;
+      overflow-x: hidden;
+    }
+    #header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #3a3a3a;
+    }
+    #header h1 {
+      font-size: 14px;
+      font-weight: bold;
+      color: #ff9a00;
+    }
+    #status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #555;
+      flex-shrink: 0;
+    }
+    #status-dot.running { background: #4ec9b0; }
+    #status-dot.error   { background: #f44747; }
+    #status-text {
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 8px;
+    }
+    #log {
+      background: #141414;
+      border: 1px solid #333;
+      border-radius: 3px;
+      padding: 6px;
+      height: 180px;
+      overflow-y: auto;
+      font-family: 'Courier New', monospace;
+      font-size: 10px;
+      color: #9cdcfe;
+      line-height: 1.4;
+    }
+    #log .err  { color: #f44747; }
+    #log .ok   { color: #4ec9b0; }
+    #log .warn { color: #dcdcaa; }
+    #btn-clear {
+      margin-top: 8px;
+      padding: 4px 10px;
+      background: #3a3a3a;
+      border: 1px solid #555;
+      color: #ccc;
+      cursor: pointer;
+      border-radius: 2px;
+      font-size: 11px;
+    }
+    #btn-clear:hover { background: #4a4a4a; }
+    #version {
+      margin-top: 8px;
+      color: #555;
+      font-size: 10px;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <div id="status-dot"></div>
+    <h1>IL MCP Bridge</h1>
+  </div>
+  <div id="status-text">Inicializando...</div>
+  <div id="log"></div>
+  <button id="btn-clear">Limpar Log</button>
+  <div id="version">v1.0.0</div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

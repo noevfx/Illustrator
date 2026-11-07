@@ -4,7 +4,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 SOURCE="$SCRIPT_DIR/Artboard_Resizer"
 EXTENSIONS_DIR="$HOME/Library/Application Support/Adobe/CEP/extensions"
-DESTINATION="$EXTENSIONS_DIR/com.eduardonoe.artboardresizer"
+DESTINATION="$EXTENSIONS_DIR/com.noevfx.artboardresizer"
 
 if [[ ! -d "$SOURCE" ]]; then
     echo "Installation failed: the Artboard_Resizer folder is missing."
